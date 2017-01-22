@@ -3,7 +3,7 @@ from Rope import do_expr,do_multi,do_range,do_operator,do_term
 def p_expr(p):
     '''expr : multi
             | expr multi
-            | expr operator multi'''
+            | expr operator expr '''
     p[0] = do_expr(p)
 
 def p_multi(p):
